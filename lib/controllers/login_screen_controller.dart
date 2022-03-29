@@ -39,8 +39,9 @@ class LoginScreenController extends GetxController {
     if (response != null && response.status!) {
       loginScreenResponse = response;
     //  pref.clearPreferences();
-    //  pref.saveUserData(loginScreenResponse.data);
-    //  Get.to(EmployeeProfileScreen());
+      pref.saveUserData(loginScreenResponse!.data);
+     // Get.to(DashboardScreen());
+
       showSnackbar(response.message!);
     }
     else{

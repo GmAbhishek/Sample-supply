@@ -12,7 +12,7 @@ class ApiConstants {
     'Content-Type': 'application/json',
   };
 
-  final baseUrl = 'http://139.59.61.124/';
+  final baseUrl = 'http://';
 
   String verifyLoginUrl() => baseUrl + 'accounts/login/';
 

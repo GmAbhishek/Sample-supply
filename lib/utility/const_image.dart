@@ -25,4 +25,9 @@ class ConstImage {
   final emailIcon = "assets/icons/email.png";
   final passwordIcon = "assets/icons/password.png";
   final smartphoneIcon = "assets/icons/smartphone.png";
+
+  final order = "assets/icons/order.png";
+  final transaction = "assets/icons/transaction.png";
+  final staff = "assets/icons/staff.png";
+  final products = "assets/icons/products.png";
 }

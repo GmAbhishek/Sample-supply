@@ -15,7 +15,7 @@ class PrefRepository {
     (await _getPref()).clear();
   }
 
-  saveUserData(Data value) async =>
+  saveUserData(Data? value) async =>
       (await _getPref()).setString(_const.prefUserData,
           value != null ? json.encode(value) : "");
 

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:supplychainfinal/controllers/login_screen_controller.dart';
@@ -31,7 +30,6 @@ class _LoginFormWidgetState extends State<LoginFormWidget> {
             preIcon: Icons.person,
             errorText: 'Invalid Username',
             contorller: loginCtrl.emailtxtController,
-
           ),
           TextFormWidget(
             text: 'Password',
@@ -40,21 +38,19 @@ class _LoginFormWidgetState extends State<LoginFormWidget> {
             errorText: 'Invalid Password',
             contorller: loginCtrl.passwordController,
           ),
-
-            GetBuilder<LoginScreenController>(
-    builder: (_) {
-    return loginCtrl.loading == true
-    ? const ProgressBarWidget()
-          :ButtonWidget(
-              text: 'Sign In',
-              tColor: Colors.white,
-              bColor: primaryColor,
-              press: () {
-
-                loginCtrl.VerifyLogin(loginCtrl.emailtxtController.text,loginCtrl.passwordController.text);
-               // Navigator.pushNamed(context, '/dashboard');
-              });
-    }),
+          GetBuilder<LoginScreenController>(builder: (_) {
+            return loginCtrl.loading == true
+                ? const ProgressBarWidget()
+                : ButtonWidget(
+                    text: 'Sign In',
+                    tColor: Colors.white,
+                    bColor: primaryColor,
+                    press: () {
+                      loginCtrl.VerifyLogin(loginCtrl.emailtxtController.text,
+                          loginCtrl.passwordController.text);
+                      // Navigator.pushNamed(context, '/dashboard');
+                    });
+          }),
         ],
       ),
     );
